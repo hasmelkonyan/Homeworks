@@ -1,0 +1,66 @@
+def even_or_odd():
+    num = input("Input any number: ")
+    if not num.isnumeric():
+        print("Invalid input!")
+        return even_or_odd()
+    num = int(num)
+    if num % 2 == 0:
+        print("The number is even")
+    else:
+        print("The number is odd")
+
+
+def consonant_or_vowel():
+    chr = input("Input any character from latin alphabet: ")
+    if not chr.isalpha() or len(chr) != 1:
+        print("Invalid input!")
+        return consonant_or_vowel()
+    if chr in ('a', 'e', 'o', 'u', 'e'):
+        print(f"{chr} is vowel")
+    else:
+        print(f"{chr} is consonant")
+
+
+
+def fib():
+    n = input("Input any number: ")
+    if not n.isnumeric() or int(n) < 0:
+        print("Invalid input!")
+        return fib()
+    n = int(n)
+    if n < 2:
+        return n
+    f1, f2 = 0, 1
+    k = 3
+    while k <= n:
+        f1, f2 = f2, f1 + f2
+        k += 1
+    return f2
+
+
+
+def digits_sum():
+    num = input("Input any positive number: ")
+    if not num.isnumeric():
+        print("Invalid input!")
+        return digits_sum()
+    sum = 0
+    num = int(num)
+    while num > 0:
+        sum += num % 10
+        num //= 10
+    return sum
+
+
+def print_this():
+    for i in range(5):
+        for j in range(5):
+            if i in (1, 2, 3) and j in (1, 2, 3):
+                print(" ", end="")
+            else:
+                print('*', end="")
+        print()
+        
+
+
+print_this()
