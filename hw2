@@ -1,0 +1,48 @@
+from random import randint
+
+def kg_to_pound():
+    kg = input("Input kg value: ")
+    pd = float(kg) / 2.2
+    print(f"{kg} kilogram is {pd} pound")
+    
+
+def random_nums():
+    for i in range(50):
+        print(randint(3, 7), end=", ")
+        
+        
+def compute():
+    x = int(input("Input the first number: "))
+    y = int(input("Input the second number: "))
+    print(abs(x - y) / (x + y))
+
+
+def leap_years():
+    year = input("Input year: ") 
+    if not year.isnumeric() or int(year) <= 1600:
+        print("Invalid input!")
+        return(leap_years())
+    year = int(year)
+    return (year - 1600) // 4 - (year - 1600) // 100 + (year - 1600) // 400 
+    
+
+def is_perfect_num(num):
+    count = 1
+    for i in range(2, num // 2 + 1):
+        if num % i == 0:
+            count += i
+    if count == num:
+        return True
+    return False
+    
+    
+def perfect_numbers():
+    for num in range(2, 1000):
+        if is_perfect_num(num):
+            print(num)
+
+
+
+    
+
+
