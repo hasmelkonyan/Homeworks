@@ -1,5 +1,4 @@
 import random
-import re
 
 
 def input_sum():
